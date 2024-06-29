@@ -65,7 +65,8 @@ export function createResponse(responseType, responseData) {
 
             case "stream":
                 response = {
-                    url: createStream(responseData)
+                    url: responseData.u,
+                    ...responseData
                 }
                 break;
 
